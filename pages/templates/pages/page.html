@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{% endblock title %}
+
+{% block sidenav %}
+{% for page in page_list %}
+  
+ <a href="{{ page.permalink }}">{{ page.title }}</a>
+
+
+{% endfor %}
+{% endblock sidenav %}
+
+
+
+
+
+
+
+{% block content %}
+
+{% autoescape off %}
+  {{content}}
+{% endautoescape %}
+<p>
+   Page last updated: {{ last_updated|date:"D d F Y" }}
+  </p>
+{% endblock content %}
+
+
