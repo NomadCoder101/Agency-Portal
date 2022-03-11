@@ -1,7 +1,7 @@
 # Agency-Portal
 Django Agency Portal with dynamic page creation , contact form  , quotation request form  .
 
-Started this new project to build it to be more user freidnly so anyone can simply build a website with minimum knowledge.
+Started this new project to build a user freidnly portal ,so anyone can simply build a website with minimum knowledge.
 
 i will be updating more details as we go . 
 
