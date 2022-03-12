@@ -33,14 +33,36 @@
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
         <a class="navbar-brand" href="{% url 'home' %}">Agency Portal</a>
-        <a class="btn btn-primary" href="#signup">Sign Up</a>
+   
+       
+    
+
         {% block sidenav %}
-          
-          
         {% endblock sidenav %}
+
         <a href="/contact">Contact Us</a>
         <a href="/quote/">Get a Quote</a>
         <a href="/quote/show">Show Quotes</a>
+        <div id="logo"><img src=""alt=""/>
+            
+            <span style="float: right;">
+            
+            {% if user.is_authenticated %}
+            
+              Hello, {{ user.username }}. <a href="{% url 'logout' %}?next=/">Log out</a>.
+            
+            {% else %}
+
+              Not logged in. <a href="{% url 'login' %}?next=/">Log in</a>.
+            
+            
+            
+            {% endif %}
+            
+            </span> 
+            
+            </div>
+
     </div>
   </nav>
     <header class="">
